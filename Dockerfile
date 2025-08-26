@@ -1,6 +1,13 @@
 FROM hivemq/hivemq-ce:2023.2
 
-# Create and set permissions for config file
-RUN mkdir -p /opt/hivemq/conf
+# Set environment variables
+ENV HIVEMQ_MQTT_PORT=80
+ENV HIVEMQ_REST_API_ENABLED=true
+ENV HIVEMQ_REST_API_PORT=8888
+ENV HOST=0.0.0.0
+
+# Copy configuration
 COPY config.xml /opt/hivemq/conf/config.xml
-RUN chmod 644 /opt/hivemq/conf/config.xml
+
+# Expose port 80
+EXPOSE 80
