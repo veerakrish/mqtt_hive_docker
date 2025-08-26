@@ -1,0 +1,14 @@
+<configuration>
+    <mqtt>
+        <listeners>
+            <tcp-listener>
+                <port>80</port>
+                <bind-address>0.0.0.0</bind-address>
+            </tcp-listener>
+            <websocket-listener>
+                <port>80</port>
+                <bind-address>0.0.0.0</bind-address>
+            </websocket-listener>
+        </listeners>
+    </mqtt>
+</configuration>
