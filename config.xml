@@ -2,12 +2,13 @@
     <mqtt>
         <listeners>
             <tcp-listener>
-                <port>80</port>
-                <bind-address>0.0.0.0</bind-address>
+                <port>${HIVEMQ_MQTT_PORT}</port>
+                <bind-address>${HOST}</bind-address>
             </tcp-listener>
             <websocket-listener>
-                <port>80</port>
-                <bind-address>0.0.0.0</bind-address>
+                <port>${HIVEMQ_MQTT_PORT}</port>
+                <bind-address>${HOST}</bind-address>
+                <path>/mqtt</path>
             </websocket-listener>
         </listeners>
     </mqtt>
